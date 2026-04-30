@@ -3,8 +3,15 @@ name: Python CI/CD Pipeline
 on:
   push:
     branches: [ "main", "develop", "master" ]
+    paths-ignore:
+      - 'README.md'
+      - 'docs/**'
+      - '.gitignore'
+      - '.dockerignore'
   pull_request:
     branches: [ "main", "master" ]
+    paths-ignore:
+      - 'README.md'
 
 jobs:
   quality-assurance:
